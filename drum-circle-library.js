@@ -6,7 +6,7 @@
 /*jshint strict: true */
 /*global require, module, exports */
 
-if (typeof require !== 'undefined') {
+if (typeof define !== 'function') {
     var constants = require("./constants");
     var time_utils = require("./time_utils");
     var utils = require("./utils");

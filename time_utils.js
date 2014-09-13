@@ -7,8 +7,7 @@
 /*global require, module, exports, define */
 
 // Let it be used on both client (browser) and server (node.js)
-// The client doesn't have 'require' but the server... requries it.
-if (typeof require !== 'undefined') {
+if (typeof define !== 'function') {
     var _ = require("lodash");
     var utils = require("./utils");
 }
