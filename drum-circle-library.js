@@ -4,23 +4,18 @@
  */
 
 /*jshint strict: true */
-/*global require, module, exports */
+/*global require, module */
 
+// Let it be used on both client (browser) and server (node.js)
 if (typeof define !== 'function') {
-    var constants = require("./constants");
-    var time_utils = require("./time_utils");
-    var utils = require("./utils");
+    var define = require('amdefine')(module);
 }
 
-if (typeof exports !== 'undefined') {
-    if (typeof module !== 'undefined' && module.exports) {
-        module.exports = {
-            constants: constants,
-            time_utils: time_utils,
-            utils: utils
-        };
-    }
-    exports.constants = constants;
-    exports.time_utils = time_utils;
-    exports.utils = utils;
-}
+define(['constants', 'utils', 'time_utils'], function(constants, utils, time_utils) {
+    "use strict";
+    return {
+        constants: constants,
+        utils: utils,
+        time_utils: time_utils
+    };
+});
