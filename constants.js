@@ -266,9 +266,7 @@ var constants = (function(_) {
 if (typeof define === 'function' && define.amd) {
     define(function() {
         "use strict";
-        return {
-            constants: constants
-        };
+        return constants;
     });
 }
 

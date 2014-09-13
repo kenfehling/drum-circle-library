@@ -151,9 +151,7 @@ var utils = (function(_) {
 if (typeof define === 'function' && define.amd) {
     define(function() {
         "use strict";
-        return {
-            utils: utils
-        };
+        return utils;
     });
 }
 

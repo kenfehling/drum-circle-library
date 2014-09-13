@@ -180,9 +180,7 @@ var time_utils = (function(_, utils) {
 if (typeof define === 'function' && define.amd) {
     define(function() {
         "use strict";
-        return {
-            time_utils: time_utils
-        };
+        return time_utils;
     });
 }
 
