@@ -11,7 +11,7 @@ if (typeof require !== 'undefined') {
     var _ = require("lodash");
 }
 
-var Constants = (function(_) {
+var constants = (function(_) {
     "use strict";
     var PLAYER_COLORS = ['blue', 'red', 'green', 'yellow', 'purple', 'orange'];
     var OPEN_SESSION_PLAYER_COLORS = _.without(PLAYER_COLORS, "orange");
@@ -263,14 +263,14 @@ var Constants = (function(_) {
 // Let it be used on both client (browser) and server (node.js)
 if (typeof exports !== 'undefined') {
     if (typeof module !== 'undefined' && module.exports) {
-        module.exports = Constants;
+        module.exports = constants;
     }
-    exports.Constants = Constants;
-    exports.Constants.EVENTS = Constants.EVENTS;  // Shouldn't be needed
-    exports.Constants.STATES = Constants.STATES;  // but the IDE likes it.
+    exports.constants = constants;
+    exports.constants.EVENTS = constants.EVENTS;  // Shouldn't be needed
+    exports.constants.STATES = constants.STATES;  // but the IDE likes it.
 }
 
 // define globally in case AMD is not available or available but not used
 if (typeof window !== 'undefined') {
-    window.Constants = Constants;
+    window.constants = constants;
 }
