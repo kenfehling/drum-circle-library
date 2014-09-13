@@ -6,8 +6,6 @@
 /*jshint strict: true */
 /*global require, module, exports */
 
-
-
 if (typeof require !== 'undefined') {
     var constants = require("./constants");
     var time_utils = require("./time_utils");
@@ -17,7 +15,9 @@ if (typeof require !== 'undefined') {
 if (typeof exports !== 'undefined') {
     if (typeof module !== 'undefined' && module.exports) {
         module.exports = {
-            constants: constants
+            constants: constants,
+            time_utils: time_utils,
+            utils: utils
         };
     }
     exports.constants = constants;
