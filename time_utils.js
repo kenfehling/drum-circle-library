@@ -4,15 +4,14 @@
  */
 
 /*jshint strict: true */
-/*global require, module, exports, define */
+/*global require, module */
 
 // Let it be used on both client (browser) and server (node.js)
 if (typeof define !== 'function') {
-    var _ = require("lodash");
-    var utils = require("./utils");
+    var define = require('amdefine')(module);
 }
 
-var time_utils = (function(_, utils) {
+define(['lodash', 'utils'], function(_, utils) {
     "use strict";
 
     // timeDifference is negative when client is behind, positive when ahead
@@ -171,28 +170,4 @@ var time_utils = (function(_, utils) {
         calculateTimeElapsedInMeasure: calculateTimeElapsedInMeasure,
         calculateTimeElapsedInCycle: calculateTimeElapsedInCycle
     };
-})(_, utils);
-
-/**
- * Add support for AMD (Asynchronous Module Definition) libraries such as require.js.
- */
-if (typeof define === 'function' && define.amd) {
-    define(function() {
-        "use strict";
-        return time_utils;
-    });
-}
-
-/**
- * Add support for CommonJS libraries such as browserify.
- */
-if (typeof exports !== 'undefined') {
-    module.exports = time_utils;
-}
-
-/**
- * Define globally in case AMD is not available or available but not used
- */
-if (typeof window !== 'undefined') {
-    window.time_utils = time_utils;
-}
+});
