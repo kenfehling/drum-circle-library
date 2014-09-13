@@ -1,0 +1,25 @@
+{
+    "name": "drum-circle-library",
+    "description": "Library shared between Drum Circle's web and API modules",
+    "version": "0.0.1",
+    "private": false,
+    "author": "Ken Fehling <ken@androidideas.org>",
+    "repository": {
+        "type": "git",
+        "url": "git://bitbucket.org/kenfehling/drum-circle-library"
+    },
+    "scripts": {
+
+    },
+    "dependencies": {
+        "lodash": "2.4.x"
+    },
+    "devDependencies": {
+        "nodeunit": "0.8.x"
+    },
+    "files": [
+        "constants.js",
+        "time_utils.js",
+        "utils.js"
+    ]
+}
