@@ -1,7 +1,7 @@
 {
     "name": "drum-circle-library",
     "description": "Library shared between Drum Circle's web and API modules",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "private": false,
     "author": "Ken Fehling <ken@androidideas.org>",
     "repository": {
