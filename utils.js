@@ -164,8 +164,9 @@ if (typeof exports !== 'undefined') {
     exports.utils = utils;
 }
 
-// define globally in case AMD is not available or available but not used
-
+/**
+ * Define globally in case AMD is not available or available but not used
+ */
 if (typeof window !== 'undefined') {
     window.utils = utils;
 }

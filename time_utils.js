@@ -187,26 +187,15 @@ if (typeof define === 'function' && define.amd) {
 }
 
 /**
- * Add support for AMD (Asynchronous Module Definition) libraries such as require.js.
- */
-if (typeof define === 'function' && define.amd) {
-    define(function() {
-        "use strict";
-        return {
-            time_utils: time_utils
-        };
-    });
-}
-
-/**
  * Add support for CommonJS libraries such as browserify.
  */
 if (typeof exports !== 'undefined') {
     exports.time_utils = time_utils;
 }
 
-// define globally in case AMD is not available or available but not used
-
+/**
+ * Define globally in case AMD is not available or available but not used
+ */
 if (typeof window !== 'undefined') {
     window.time_utils = time_utils;
 }
