@@ -188,7 +188,7 @@ if (typeof define === 'function' && define.amd) {
  * Add support for CommonJS libraries such as browserify.
  */
 if (typeof exports !== 'undefined') {
-    exports.time_utils = time_utils;
+    module.exports = time_utils;
 }
 
 /**

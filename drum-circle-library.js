@@ -13,6 +13,13 @@ if (typeof require !== 'undefined') {
 }
 
 if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = {
+            constants: constants,
+            time_utils: time_utils,
+            utils: utils
+        };
+    }
     exports.constants = constants;
     exports.time_utils = time_utils;
     exports.utils = utils;
