@@ -3,7 +3,7 @@
  */
 
 /*jshint strict: true */
-/*global require, module, exports */
+/*global require, module, exports, define */
 
 // Let it be used on both client (browser) and server (node.js)
 // The client doesn't have 'require' but the server... requries it.
@@ -260,12 +260,39 @@ var constants = (function(_) {
     };
 })(_);
 
-// Let it be used on both client (browser) and server (node.js)
+/**
+ * Add support for AMD (Asynchronous Module Definition) libraries such as require.js.
+ */
+if (typeof define === 'function' && define.amd) {
+    define(function() {
+        "use strict";
+        return {
+            constants: constants
+        };
+    });
+}
+
+/**
+ * Add support for AMD (Asynchronous Module Definition) libraries such as require.js.
+ */
+if (typeof define === 'function' && define.amd) {
+    define(function() {
+        "use strict";
+        return {
+            constants: constants
+        };
+    });
+}
+
+/**
+ * Add support for CommonJS libraries such as browserify.
+ */
 if (typeof exports !== 'undefined') {
-    if (typeof module !== 'undefined' && module.exports) {
-        module.exports = constants;
-    }
     exports.constants = constants;
-    exports.constants.EVENTS = constants.EVENTS;  // Shouldn't be needed
-    exports.constants.STATES = constants.STATES;  // but the IDE likes it.
+}
+
+// define globally in case AMD is not available or available but not used
+
+if (typeof window !== 'undefined') {
+    window.constants = constants;
 }
