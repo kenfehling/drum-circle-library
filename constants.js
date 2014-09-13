@@ -269,3 +269,8 @@ if (typeof exports !== 'undefined') {
     exports.Constants.EVENTS = Constants.EVENTS;  // Shouldn't be needed
     exports.Constants.STATES = Constants.STATES;  // but the IDE likes it.
 }
+
+// define globally in case AMD is not available or available but not used
+if (typeof window !== 'undefined') {
+    window.Constants = Constants;
+}

@@ -181,3 +181,8 @@ if (typeof exports !== 'undefined') {
     }
     exports.time_utils = time_utils;
 }
+
+// define globally in case AMD is not available or available but not used
+if (typeof window !== 'undefined') {
+    window.time_utils = time_utils;
+}
