@@ -21,6 +21,7 @@
     "files": [
         "constants.js",
         "time_utils.js",
-        "utils.js"
+        "utils.js",
+        "drum-circle-library.js"
     ]
 }
