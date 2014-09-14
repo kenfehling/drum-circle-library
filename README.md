@@ -1,0 +1,1 @@
+A try at using a module both in require.js and node.js
