@@ -20,9 +20,9 @@
         "nodeunit": "0.8.x"
     },
     "files": [
-        "constants.js",
         "time_utils.js",
         "utils.js",
+        "constants.js",
         "drum-circle-library.js"
     ]
 }
