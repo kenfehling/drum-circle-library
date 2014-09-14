@@ -11,11 +11,11 @@ if (typeof define !== 'function') {
     var define = require('amdefine')(module);
 }
 
-define(['constants', 'utils', 'time_utils'], function(constants, utils, time_utils) {
+define(['constants', 'time_utils', 'utils'], function(constants, time_utils, utils) {
     "use strict";
     return {
         constants: constants,
-        utils: utils,
-        time_utils: time_utils
+        time_utils: time_utils,
+        utils: utils
     };
 });
