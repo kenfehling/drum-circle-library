@@ -6,7 +6,7 @@
     "author": "Ken Fehling <ken@androidideas.org>",
     "repository": {
         "type": "git",
-        "url": "git://bitbucket.org/kenfehling/drum-circle-library"
+        "url": "git://github.com/kenfehling/drum-circle-library"
     },
     "scripts": {
 
@@ -17,11 +17,5 @@
     },
     "devDependencies": {
         "nodeunit": "0.8.x"
-    },
-    "files": [
-        "time_utils.js",
-        "utils.js",
-        "constants.js",
-        "drum-circle-library.js"
-    ]
+    }
 }
