@@ -8,7 +8,6 @@
         "type": "git",
         "url": "git://bitbucket.org/kenfehling/drum-circle-library"
     },
-    "main": "drum-circle-library.js",
     "scripts": {
 
     },
