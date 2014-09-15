@@ -199,8 +199,8 @@ define(['lodash'], function(_) {
         },
         DIRS: {
             GAME: '/game/',
-            JOIN_GAME: '/join_game/',
-            CREATE_GAME: '/create_game/',
+            JOIN_GAME: '/join-game/',
+            CREATE_GAME: '/create-game/',
             OPEN_SESSION_ENTRANCE: '/open_session/',
             DRUMS: '/drums/'
         },
@@ -215,10 +215,6 @@ define(['lodash'], function(_) {
             PLAYER_RECONNECT: "plr r",
             RECONNECT_TO_GAME: "recon_game",
             RECONNECT_TO_CREATE_GAME: "recon_crt",
-            PLAYER_LIST: "plrs",
-            TIME_CHECK: 't_chk',
-            TIME_RESPONSE: 't_resp',
-            CREATE_GAME: 'crt_g',
             JOIN_GAME: 'j_game',
             PLAY_GAME: 'p_game',
             START_GAME: 's_game',
