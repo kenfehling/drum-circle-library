@@ -33,6 +33,8 @@ define(['lodash'], function(_) {
     return {
         APP_NAME: "Drum Circle",
         FANOUT_REALM: "63969fc2",
+        MIN_PLAYERS: 0, //2,
+        MAX_PLAYERS: PLAYER_COLORS.length,
         GRANULARITY: 1,  // Allowable error in ms, may affect performance
         DRUM_VOLUME: 1.0,
         SYNTH_VOLUME: 0.05, //0.025,
@@ -62,8 +64,6 @@ define(['lodash'], function(_) {
         DEFAULT_API_PORT: 8080,
         PLAYER_COLORS: PLAYER_COLORS,
         OPEN_SESSION_PLAYER_COLORS: OPEN_SESSION_PLAYER_COLORS,
-        MIN_PLAYERS: 2,
-        MAX_PLAYERS: PLAYER_COLORS.length,
         OPEN_SESSION_CODE: 'OPEN_SESSION',
         USE_ARROW_SWIPING: false,
         USE_DRUM_EQ: true,
