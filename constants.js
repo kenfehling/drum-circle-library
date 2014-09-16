@@ -219,7 +219,6 @@ define(['lodash'], function(_) {
             PLAY_GAME: 'p_game',
             START_GAME: 's_game',
             QUIT_GAME: 'q_game',
-            GAME_JOINED: 'game jd',
             GAME_STARTED: 'game sd',
             TIME_SYNCHRONIZED: 't_sync',
             AUDIO_INITIALIZING: 'init_audio',
