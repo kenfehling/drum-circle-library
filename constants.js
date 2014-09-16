@@ -64,7 +64,7 @@ define(['lodash'], function(_) {
         DEFAULT_API_PORT: 8080,
         PLAYER_COLORS: PLAYER_COLORS,
         OPEN_SESSION_PLAYER_COLORS: OPEN_SESSION_PLAYER_COLORS,
-        OPEN_SESSION_CODE: 'OPEN_SESSION',
+        OPEN_SESSION_CODE: 100,
         USE_ARROW_SWIPING: false,
         USE_DRUM_EQ: true,
         EQ: {
