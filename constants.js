@@ -246,10 +246,6 @@ define(['lodash'], function(_) {
                 PLAYING: 1,
                 PAUSED_BY_USER: 2,
                 PAUSED_BY_SYSTEM: 3
-            },
-            GAME : {
-                CREATING: 0,
-                RUNNING: 1
             }
         }
     };
