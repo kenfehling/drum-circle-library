@@ -98,6 +98,10 @@ define(['lodash'], function(_) {
             return randomString;
         },
 
+        isParamTruthy: function(p) {
+            return p === true || p === 1 || p === '1' || p === 'true';
+        },
+
         removeItemFromArrayWhere: function(array, properties) {
             removeItemFromArray(array, _.findWhere(array, properties));
         },
