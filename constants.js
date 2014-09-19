@@ -218,7 +218,6 @@ define(['lodash'], function(_) {
             PLAYER_RECONNECT: "plr r",
             JOIN_GAME: 'j_game',
             PLAY_GAME: 'p_game',
-            START_GAME: 's_game',
             GAME_STARTED: 'game sd',
             TIME_SYNCHRONIZED: 't_sync',
             AUDIO_INITIALIZING: 'init_audio',
