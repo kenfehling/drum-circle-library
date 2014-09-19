@@ -223,6 +223,7 @@ define(['lodash'], function(_) {
             TIME_SYNCHRONIZED: 't_sync',
             AUDIO_INITIALIZING: 'init_audio',
             SYNTH_STARTED: 'synth_std',
+            START_PRESSED: 'start_pressed',
             PLAY_AUDIO: 'play_audio',
             PAUSE_AUDIO: 'pause_audio',
             DRUM_SELECTED: 'drum_selected',
