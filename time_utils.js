@@ -11,7 +11,7 @@ if (typeof define !== 'function') {
     var define = require('amdefine')(module);
 }
 
-define(['lodash', 'drum-circle-library/utils'], function(_, utils) {
+define(['lodash', './utils'], function(_, utils) {
     "use strict";
 
     // timeDifference is negative when client is behind, positive when ahead
