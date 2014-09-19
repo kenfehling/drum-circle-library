@@ -62,6 +62,7 @@ define(['lodash'], function(_) {
         MS_PER_DRUM_SAMPLE: 4000,
         DEFAULT_WEB_PORT: 5000,
         DEFAULT_API_PORT: 8080,
+        DEFAULT_API_HOST: 'http://localhost:' + this.DEFAULT_API_PORT,
         PLAYER_COLORS: PLAYER_COLORS,
         OPEN_SESSION_PLAYER_COLORS: OPEN_SESSION_PLAYER_COLORS,
         OPEN_SESSION_CODE: 100,
