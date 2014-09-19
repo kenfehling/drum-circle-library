@@ -84,18 +84,18 @@ define(['lodash'], function(_) {
             {
                 name: 'Lacuna Rock Kit',
                 path: 'Lacuna_Rock_Kit',
-                drums: ['KICK', 'SNARE', 'HIGHTOM', 'LOWTOM', 'HIHAT', 'CRASH']
+                drums: ['kick', 'snare', 'hightom', 'lowtom', 'hihat', 'crash']
             }
             /*
              {
              name: 'Retro Kit',
              path: 'retrokit',
-             drums: ['KICK', 'SNARE', 'HIGHTOM', 'LOWTOM', 'COWBELL', 'HANDCLAP']
+             drums: ['kick', 'snare', 'hightom', 'lowtom', 'cowbell', 'handclap']
              }
              */
         ],
         DEFAULT_PATTERNS: {
-            'KICK': {
+            'kick': {
                 4: [
                     1, 0, 0, 0,
                     1, 0, 1, 0,
@@ -121,7 +121,7 @@ define(['lodash'], function(_) {
                      */
                 ]
             },
-            'SNARE': {
+            'snare': {
                 4: [
                     0, 0, 1, 0,
                     0, 0, 1, 0,
@@ -141,7 +141,7 @@ define(['lodash'], function(_) {
                     0, 0, 0, 0, 0, 0, 1, 1
                 ]
             },
-            'HIGHTOM': {
+            'hightom': {
                 4: [
                     0, 1, 0, 0,
                     0, 0, 0, 0,
@@ -161,7 +161,7 @@ define(['lodash'], function(_) {
                     0, 0, 0, 0, 0, 0, 0, 0
                 ]
             },
-            'LOWTOM': {
+            'lowtom': {
                 4: [
                     1, 0, 1, 1,
                     1, 0, 1, 0,
@@ -181,7 +181,7 @@ define(['lodash'], function(_) {
                     0, 1, 0, 1, 0, 0, 1, 1
                 ]
             },
-            'DEFAULT': {
+            'default': {
                 4: [
                     1, 0, 1, 0,
                     0, 0, 0, 0,
