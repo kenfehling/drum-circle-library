@@ -30,6 +30,7 @@ define(['lodash'], function(_) {
         //G5: 783.99
         //A5: 880
     };
+    var DEFAULT_API_PORT = 8080;
     return {
         APP_NAME: "Drum Circle",
         FANOUT_REALM: "63969fc2",
@@ -61,8 +62,7 @@ define(['lodash'], function(_) {
         CONFIRM_QUIT_CREATED_GAME: true,
         MS_PER_DRUM_SAMPLE: 4000,
         DEFAULT_WEB_PORT: 5000,
-        DEFAULT_API_PORT: 8080,
-        DEFAULT_API_HOST: 'http://localhost:' + this.DEFAULT_API_PORT,
+        DEFAULT_API_HOST: 'http://localhost:' + DEFAULT_API_PORT,
         PLAYER_COLORS: PLAYER_COLORS,
         OPEN_SESSION_PLAYER_COLORS: OPEN_SESSION_PLAYER_COLORS,
         OPEN_SESSION_CODE: 100,
@@ -83,12 +83,12 @@ define(['lodash'], function(_) {
                 drums: ['KICK', 'SNARE', 'HIGHTOM', 'LOWTOM', 'HIHAT', 'CRASH']
             }
             /*
-            {
-                name: 'Retro Kit',
-                path: 'retrokit',
-                drums: ['KICK', 'SNARE', 'HIGHTOM', 'LOWTOM', 'COWBELL', 'HANDCLAP']
-            }
-            */
+             {
+             name: 'Retro Kit',
+             path: 'retrokit',
+             drums: ['KICK', 'SNARE', 'HIGHTOM', 'LOWTOM', 'COWBELL', 'HANDCLAP']
+             }
+             */
         ],
         DEFAULT_PATTERNS: {
             'KICK': {
@@ -110,11 +110,11 @@ define(['lodash'], function(_) {
                     1, 0, 0, 0, 1, 0, 0, 0,
                     1, 0, 0, 0, 1, 0, 0, 0
                     /*
-                    1, 0, 0, 0, 1, 0, 0, 0,
-                    1, 0, 1, 0, 1, 0, 1, 0,
-                    1, 0, 0, 0, 1, 0, 0, 0,
-                    1, 0, 0, 1, 1, 0, 1, 0
-                    */
+                     1, 0, 0, 0, 1, 0, 0, 0,
+                     1, 0, 1, 0, 1, 0, 1, 0,
+                     1, 0, 0, 0, 1, 0, 0, 0,
+                     1, 0, 0, 1, 1, 0, 1, 0
+                     */
                 ]
             },
             'SNARE': {
