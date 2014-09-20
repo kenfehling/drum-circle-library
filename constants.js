@@ -232,6 +232,7 @@ define(['lodash'], function(_) {
             PLAY_DRUM: 'play_drum',
             GYROSCOPE_BEND: 'gyro',
             NOTES_PER_BEAT_SET: 'npb_set',
+            TEMPO_SET: 'tempo_set',
             ERROR: 'error'
         },
         STATES: {
