@@ -225,6 +225,8 @@ define(['lodash'], function(_) {
             START_PRESSED: 'start_pressed',
             PLAY_AUDIO: 'play_audio',
             PAUSE_AUDIO: 'pause_audio',
+            SYSTEM_PAUSE: 'sys_pause',
+            SYSTEM_UNPAUSE: 'sys_unpause',
             DRUM_SELECTED: 'drum_selected',
             NEXT_MEASURE: 'next_meas',
             NEXT_BEAT: 'next_beat',
