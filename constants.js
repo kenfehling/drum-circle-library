@@ -233,6 +233,7 @@ define(['lodash'], function(_) {
             GYROSCOPE_BEND: 'gyro',
             NOTES_PER_BEAT_SET: 'npb_set',
             TEMPO_SET: 'tempo_set',
+            START_TIME_SET: 'start_time_set',
             ERROR: 'error'
         },
         STATES: {
