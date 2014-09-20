@@ -234,6 +234,7 @@ define(['lodash'], function(_) {
             NOTES_PER_BEAT_SET: 'npb_set',
             TEMPO_SET: 'tempo_set',
             START_TIME_SET: 'start_time_set',
+            BEATS_PER_MEASURE_SET: 'beats_per_measure_set',
             ERROR: 'error'
         },
         STATES: {
