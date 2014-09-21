@@ -240,10 +240,10 @@ define(['lodash'], function(_) {
         },
         STATES: {
             AUDIO : {
-                NOT_STARTED: 0,
-                PLAYING: 1,
-                PAUSED_BY_USER: 2,
-                PAUSED_BY_SYSTEM: 3
+                NOT_STARTED: 1,
+                PLAYING: 2,
+                PAUSED_BY_USER: 3,
+                PAUSED_BY_SYSTEM: 4
             }
         }
     };
