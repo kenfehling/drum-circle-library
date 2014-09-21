@@ -88,14 +88,6 @@ define(['lodash'], function(_) {
     }
 
     return {
-        /**
-         * Allows resetting a module by reloading it
-         */
-        requireUncached:  function(module) {
-            delete require.cache[require.resolve(module)];
-            return require(module);
-        },
-
         randomString: function(len, charSet) {
             charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
             var randomString = '';
