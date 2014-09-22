@@ -55,6 +55,7 @@ define(['lodash'], function(_) {
         BEATS_PER_MEASURE: 4,
         MEASURES_IN_CYCLE: 1,
         TIME_SYNCH_REQUESTS: 20,
+        TIME_SYNCH_REQUEST_INTERVAL: 100,  // milliseconds
         GAME_CODE_LENGTH: 3,
         PSEUDO_TOUCH_RESPONSE_VARIATION: 0.05,
         ALLOW_SEND_EFFECT_TO_SELF_IN_GAME: false,
@@ -63,7 +64,6 @@ define(['lodash'], function(_) {
         DEFAULT_WEB_PORT: 5000,
         DEFAULT_API_PORT: DEFAULT_API_PORT,
         DEFAULT_API_HOST: DEFAULT_API_HOST,
-        LOCAL_API_HOST: DEFAULT_API_HOST,
         REMOTE_API_HOST: 'http://drum-circle-api.herokuapp.com',
         PLAYER_COLORS: PLAYER_COLORS,
         OPEN_SESSION_PLAYER_COLORS: OPEN_SESSION_PLAYER_COLORS,
