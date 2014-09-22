@@ -76,6 +76,8 @@ define(['lodash'], function(_) {
             SYNTH_Q_RANGE: [1, 20],
             DRUM_Q_RANGE: [0.1, 0.1]
         },
+        GYROSCOPE_X_RANGE: [-5, 5],
+        GYROSCOPE_Y_RANGE: [-7, 7],
         NOTES: NOTES,
         SYNTH_NOTE_RANGE: [NOTES.A3, NOTES.A4],
         DRUM_KITS: [
