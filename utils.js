@@ -106,6 +106,18 @@ define(['lodash'], function(_) {
             removeItemFromArray(array, _.findWhere(array, properties));
         },
 
+        scaleValue: function (options) {
+            var inputValue = options.inputValue;
+            var inputRange = options.inputRange;
+            var outputRange = options.outputRange;
+            var minInput = inputRange[0];
+            var maxInput = inputRange[1];
+            var minOutput = outputRange[0];
+            var maxOutput = outputRange[1];
+            var scaleFactor = (maxOutput - minOutput) / (maxInput - minInput);
+            return (inputValue - minInput) * scaleFactor + minOutput;
+        },
+
         // Get the average of an array of numbers
         average: function (array) {
             return _.reduce(array, function(memo, num) {
