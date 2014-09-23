@@ -226,6 +226,7 @@ define(['lodash'], function(_) {
             START_PRESSED: 'start_pressed',
             PAUSE_PRESSED: 'pause_pressed',
             INITIALIZE_AUDIO: 'init_audio',
+            WEB_AUDIO_CONTEXT_CREATED: 'wac_created',
             PLAY_AUDIO: 'play_audio',
             PAUSE_AUDIO: 'pause_audio',
             DRUM_SELECTED: 'drum_selected',
