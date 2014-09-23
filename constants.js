@@ -54,7 +54,7 @@ define(['lodash'], function(_) {
         },
         BEATS_PER_MEASURE: 4,
         MEASURES_IN_CYCLE: 1,
-        TIME_SYNCH_REQUESTS: 20,
+        TIME_SYNCH_REQUESTS: 5, //20,
         TIME_SYNCH_REQUEST_INTERVAL: 100,  // milliseconds
         GAME_CODE_LENGTH: 3,
         PSEUDO_TOUCH_RESPONSE_VARIATION: 0.05,
