@@ -62,6 +62,8 @@ define(['lodash'], function(_) {
         ALLOW_SEND_EFFECT_TO_SELF_IN_OPEN_SESSION: true,
         SECONDS_PER_DRUM_SAMPLE: 4,
         DEFAULT_WEB_PORT: 5000,
+        STATIC_DIRECTORY: '/public',
+        COMPILED_STATIC_DIRECTORY: '/public-built',
         DEFAULT_API_PORT: DEFAULT_API_PORT,
         DEFAULT_API_HOST: DEFAULT_API_HOST,
         REMOTE_API_HOST: 'http://drum-circle-api.herokuapp.com',
