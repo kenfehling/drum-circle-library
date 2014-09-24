@@ -206,7 +206,7 @@ define(['lodash'], function(_) {
             GAME: '/game/',
             JOIN_GAME: '/join-game/',
             CREATE_GAME: '/create-game/',
-            OPEN_SESSION_ENTRANCE: '/open_session/',
+            OPEN_SESSION_ENTRANCE: '/open_session.html',
             DRUMS: '/drums/'
         },
         EVENTS : {
