@@ -65,6 +65,7 @@ define(['lodash'], function(_) {
         DEFAULT_API_PORT: DEFAULT_API_PORT,
         DEFAULT_API_HOST: DEFAULT_API_HOST,
         REMOTE_API_HOST: 'http://drum-circle-api.herokuapp.com',
+        PRODUCTION_WEB_HOST: 'drumcircle.io',
         PLAYER_COLORS: PLAYER_COLORS,
         OPEN_SESSION_PLAYER_COLORS: OPEN_SESSION_PLAYER_COLORS,
         OPEN_SESSION_CODE: 100,
