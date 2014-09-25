@@ -76,7 +76,7 @@ define(['lodash'], function(_) {
         EQ: {
             SYNTH_FREQ_RANGE: [350, 2000],
             DRUM_FREQ_RANGE: [500, 1000],
-            SYNTH_Q_RANGE: [1, 20],
+            SYNTH_Q_RANGE: [2, 20],
             DRUM_Q_RANGE: [0.1, 0.1]
         },
         GYROSCOPE_X_RANGE: [-5, 5],
