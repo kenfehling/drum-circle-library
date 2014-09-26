@@ -5,8 +5,7 @@
 /*jshint strict: true */
 /*global define */
 
-define(['../API/node_modules/drum-circle-library/constants'],
-function (constants) {
+define(['./constants'], function (constants) {
     "use strict";
 
     function isWithoutServer() {
