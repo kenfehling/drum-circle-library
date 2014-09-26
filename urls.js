@@ -3,14 +3,15 @@
  */
 
 /*jshint strict: true */
-/*global define */
+/*global require, module */
+
+// Let it be used on both client (browser) and command line mocha tests
+if (typeof define !== 'function') {
+    var define = require('amdefine')(module);
+}
 
 define(['./constants'], function (constants) {
     "use strict";
-
-    function isWithoutServer() {
-        return window.location.protocol === "file:";
-    }
 
     function createRelativeGameUrl(gameCode) {
         return constants.DIRS.GAME + '?' + gameCode;
@@ -24,76 +25,35 @@ define(['./constants'], function (constants) {
         return constants.DIRS.CREATE_GAME + "?" + gameCode;
     }
 
-    function gotoPageIfNotAlready(url) {
-        if (window.location.href !== url) {
-            window.location.href = url;
-        }
+    function isOnGamePage(location) {
+        return location.pathname === constants.DIRS.GAME;
     }
 
-    function isOnGamePage() {
-        return window.location.pathname === constants.DIRS.GAME;
-    }
-
-    function getGameCodeFromUrl() {
-        return window.location.search.replace("?", "");
-    }
-
-    function getAbsoluteOpenSessionUrl() {
-        return browser_utils.toAbsoluteUrl(constants.DIRS.OPEN_SESSION_ENTRANCE);
-    }
-
-    function getParams() {
-        return (window.location.hash || '#').substr(1);
+    function getGameCodeFromUrl(url) {
+        var codeStart = url.indexOf('?') + 1;
+        var codeEnd = url.indexOf('#');
+        var length = codeEnd - codeStart;
+        return parseInt(url.substr(codeStart, length));
     }
 
     return {
-        gotoGame: function(game) {
-            var params = getParams();
-            params += "&drum_kit=" + game.drum_kit + "&tempo=" + game.tempo +
-                      "&start_time=" + game.start_time;
-            gotoPageIfNotAlready(createAbsoluteGameUrl(game._id) + "#" + params);
+        isOnCreateGamePage: function(location) {
+            return location.pathname === constants.DIRS.CREATE_GAME;
         },
 
-        gotoJoinGame: function(gameCode) {
-            if (isWithoutServer()) {
-                window.location.href = "../../join_game/index.html";
-            }
-            else {
-                gotoPageIfNotAlready(createAbsoluteJoinGameUrl(gameCode));
-            }
+        isOnOpenSessionEntrancePage: function(location) {
+            return location.pathname === constants.DIRS.OPEN_SESSION_ENTRANCE;
         },
 
-        gotoCreateGame: function(gameCode) {
-            gotoPageIfNotAlready(createAbsoluteCreateGameUrl(gameCode));
+        isInOpenSession: function(location) {
+            return isOnGamePage(location) &&
+                getGameCodeFromUrl(location) === constants.OPEN_SESSION_CODE;
         },
 
-        gotoJoinOpenSession: function() {
-            gotoPageIfNotAlready(getAbsoluteOpenSessionUrl());
+        isOnJoinGamePage: function(location) {
+            return location.pathname === constants.DIRS.JOIN_GAME;
         },
 
-        isOnCreateGamePage: function() {
-            return window.location.pathname === constants.DIRS.CREATE_GAME;
-        },
-
-        isOnOpenSessionEntrancePage: function() {
-            return window.location.pathname ===
-                constants.DIRS.OPEN_SESSION_ENTRANCE;
-        },
-
-        isInOpenSession: function() {
-            return isOnGamePage() &&
-                getGameCodeFromUrl() === constants.OPEN_SESSION_CODE;
-        },
-
-        isOnJoinGamePage: function() {
-            return window.location.pathname === constants.DIRS.JOIN_GAME;
-        },
-
-        goHome: function() {
-            window.location.href = "/";
-        },
-
-        isWithoutServer: isWithoutServer,
         isOnGamePage: isOnGamePage,
         getGameCodeFromUrl: getGameCodeFromUrl,
         createRelativeGameUrl: createRelativeGameUrl,
