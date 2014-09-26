@@ -3,7 +3,7 @@
  */
 
 /*jshint strict: true */
-/*global require, modul, unescape */
+/*global require, module, unescape */
 
 // Let it be used on both client (browser) and server (node.js)
 if (typeof define !== 'function') {
@@ -90,16 +90,21 @@ define(['lodash'], function(_) {
     return {
         getHashParams: function(location) {
             location = location || window.location;
-            var query = (window.location.hash || '#').substr(1),
-                map   = {};
-            query.replace(/([^&=]+)=?([^&]*)(?:&+|$)/g, function(match, key, value) {
-                //(map[key] = map[key] || []).push(value);
-                if (unescape) {
-                    value = unescape(value);
-                }
-                map[key] = value;  // Only allow one value for each key
-            });
-            return map;
+            var indexOfHash = location.indexOf('#');
+            if (indexOfHash >= 0) {
+                indexOfHash += 1;
+                var query = location.substr(indexOfHash);
+                var map = {};
+                query.replace(/([^&=]+)=?([^&]*)(?:&+|$)/g, function(match, key, value) {
+                    //(map[key] = map[key] || []).push(value);
+                    if (unescape) {
+                        value = unescape(value);
+                    }
+                    map[key] = value;  // Only allow one value for each key
+                });
+                return map;
+            }
+            return {};
         },
 
         randomString: function(len, charSet) {
