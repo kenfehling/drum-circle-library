@@ -89,7 +89,10 @@ define(['lodash'], function(_) {
 
     return {
         getHashParams: function(location) {
-            location = location || window.location;
+            location = location || (window ? window.location : null);
+            if (!location) {
+                throw "location required";
+            }
             var indexOfHash = location.indexOf('#');
             if (indexOfHash >= 0) {
                 indexOfHash += 1;
