@@ -204,8 +204,8 @@ define(['lodash'], function(_) {
                 ]
             }
         },
-        DIRS: {
-            GAME: '/game/',
+        URLS: {
+            GAME: '/game.html',
             JOIN_GAME: '/join-game/',
             CREATE_GAME: '/create-game/',
             OPEN_SESSION_ENTRANCE: '/open_session.html',

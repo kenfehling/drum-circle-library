@@ -14,19 +14,19 @@ define(['./constants'], function (constants) {
     "use strict";
 
     function createRelativeGameUrl(gameCode) {
-        return constants.DIRS.GAME + '?' + gameCode;
+        return constants.URLS.GAME + '?' + gameCode;
     }
 
     function createRelativeJoinGameUrl(gameCode) {
-        return constants.DIRS.JOIN_GAME + '?code=' + gameCode;
+        return constants.URLS.JOIN_GAME + '?code=' + gameCode;
     }
 
     function createRelativeCreateGameUrl(gameCode) {
-        return constants.DIRS.CREATE_GAME + "?" + gameCode;
+        return constants.URLS.CREATE_GAME + "?" + gameCode;
     }
 
     function isOnGamePage(location) {
-        return location.pathname === constants.DIRS.GAME;
+        return location.pathname === constants.URLS.GAME;
     }
 
     function getGameCodeFromUrl(url) {
@@ -38,11 +38,11 @@ define(['./constants'], function (constants) {
 
     return {
         isOnCreateGamePage: function(location) {
-            return location.pathname === constants.DIRS.CREATE_GAME;
+            return location.pathname === constants.URLS.CREATE_GAME;
         },
 
         isOnOpenSessionEntrancePage: function(location) {
-            return location.pathname === constants.DIRS.OPEN_SESSION_ENTRANCE;
+            return location.pathname === constants.URLS.OPEN_SESSION_ENTRANCE;
         },
 
         isInOpenSession: function(location) {
@@ -51,7 +51,7 @@ define(['./constants'], function (constants) {
         },
 
         isOnJoinGamePage: function(location) {
-            return location.pathname === constants.DIRS.JOIN_GAME;
+            return location.pathname === constants.URLS.JOIN_GAME;
         },
 
         isOnGamePage: isOnGamePage,
