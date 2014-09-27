@@ -107,6 +107,17 @@ define(['lodash'], function(_) {
             return {};
         },
 
+        paramsToParamString: function(params) {
+            var paramString = "";
+            _.each(Object.keys(params), function(key) {
+                var value = params[key];
+                if (paramString !== '') {
+                    paramString += '&';
+                }
+                paramString += key + '=' + value;
+            });
+        },
+
         randomString: function(len, charSet) {
             charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
             var randomString = '';
