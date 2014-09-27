@@ -6,7 +6,7 @@
 /*jshint strict: true */
 /*global require, module */
 
-// Let it be used on both client (browser) and server (node.js)
+// Let it be used on both client (browser) and command line mocha tests
 if (typeof define !== 'function') {
     var define = require('amdefine')(module);
 }
