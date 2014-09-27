@@ -1,5 +1,5 @@
 /**
- * Urls unit tests
+ * Urls unit tests in nodeunit
  * Author: Ken Fehling
  */
 

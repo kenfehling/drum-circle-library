@@ -1,5 +1,5 @@
 /**
- * Time utils unit tests
+ * Time utils unit tests in nodeunit
  * Author: Ken Fehling
  */
 

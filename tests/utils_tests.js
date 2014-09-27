@@ -1,5 +1,5 @@
 /**
- * Utils unit tests
+ * Utils unit tests in nodeunit
  * Author: Ken Fehling
  */
 
