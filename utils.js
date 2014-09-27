@@ -116,6 +116,7 @@ define(['lodash'], function(_) {
                 }
                 paramString += key + '=' + value;
             });
+            return paramString;
         },
 
         randomString: function(len, charSet) {

@@ -14,3 +14,10 @@ exports.testGetHashParams = function(test) {
     test.deepEqual({ a: 12, b: 24 }, params);
     test.done();
 };
+
+exports.testParamsToParamString = function(test) {
+    "use strict";
+    var paramString = utils.paramsToParamString({ a: 12, b: 24 });
+    test.equals("a=12&b=24", paramString);
+    test.done();
+};
