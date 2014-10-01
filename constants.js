@@ -82,7 +82,7 @@ define(['lodash'], function(_) {
         GYROSCOPE_Y_RANGE: [-7, 7],
         NOTES: NOTES,
         SYNTH_NOTE_RANGE: [NOTES.A3, NOTES.A4],
-        PARAMS: ['color', 'drum', 'drum_set', 'tempo', 'start_time'],
+        PARAMS: ['color', 'drum', 'drum_set', 'tempo', 'start_time', 'running'],
         DRUM_KITS: [
             {
                 name: 'Lacuna Rock Kit',
