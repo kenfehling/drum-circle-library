@@ -39,7 +39,7 @@ define(['lodash'], function(_) {
         MAX_PLAYERS: PLAYER_COLORS.length,
         GRANULARITY: 1,  // Allowable error in ms, may affect performance
         DRUM_VOLUME: 1.0,
-        SYNTH_VOLUME: 0.075,
+        SYNTH_VOLUME: 0.05,
         BEAT_DIVISIONS: [4, 6, 8],  // For different screen sizes
         SYNTH_ENVELOPE: [[3, 5.5], 1.0, 1.0, 1.0],  // Params can be ranges
         TEMPO: {
