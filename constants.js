@@ -37,6 +37,7 @@ define(['lodash'], function(_) {
         FANOUT_REALM: "63969fc2",
         MIN_PLAYERS: 0, //2,
         MAX_PLAYERS: PLAYER_COLORS.length,
+        NUM_DRUMS_IN_KIT: 6,
         GRANULARITY: 1,  // Allowable error in ms, may affect performance
         DRUM_VOLUME: 1.0,
         SYNTH_VOLUME: 0.05,
