@@ -87,6 +87,16 @@ define(['lodash'], function(_) {
         }
     }
 
+    function copyParamIfDefined (key, fromObject, toObject) {
+        addParamIfDefined(key, fromObject[key], toObject);
+    }
+
+    function addParamIfDefined(key, value, destination) {
+        if (value) {
+            destination[key] = value;
+        }
+    }
+
     return {
         getHashParams: function(location) {
             location = location || window.location.href;
@@ -117,12 +127,6 @@ define(['lodash'], function(_) {
                 paramString += key + '=' + value;
             });
             return paramString;
-        },
-
-        addParamIfGiven: function (paramName, fromObject, toObject) {
-            if (fromObject[paramName]) {
-                toObject[paramName] = toObject[paramName];
-            }
         },
 
         randomString: function(len, charSet) {
@@ -193,6 +197,8 @@ define(['lodash'], function(_) {
         },
         removeItemFromArray: removeItemFromArray,
         greatestCommonDivisor: greatestCommonDivisor,
-        clone: clone
+        clone: clone,
+        addParamIfDefined: addParamIfDefined,
+        copyParamIfDefined: copyParamIfDefined
     };
 });
