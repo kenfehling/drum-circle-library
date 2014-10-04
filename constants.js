@@ -70,7 +70,6 @@ define(['lodash'], function(_) {
         PLAYER_COLORS: PLAYER_COLORS,
         OPEN_SESSION_PLAYER_COLORS: OPEN_SESSION_PLAYER_COLORS,
         OPEN_SESSION_CODE: 100,
-        USE_ARROW_SWIPING: false,
         USE_DRUM_EQ: true,
         EQ: {
             SYNTH_FREQ_RANGE: [350, 2000],
