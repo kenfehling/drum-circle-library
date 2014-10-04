@@ -92,7 +92,7 @@ define(['lodash'], function(_) {
     }
 
     function addParamIfDefined(key, value, destination) {
-        if (value) {
+        if (typeof value !== 'undefined') {
             destination[key] = value;
         }
     }
