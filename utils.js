@@ -119,6 +119,12 @@ define(['lodash'], function(_) {
             return paramString;
         },
 
+        addParamIfGiven: function (paramName, fromObject, toObject) {
+            if (fromObject[paramName]) {
+                toObject[paramName] = toObject[paramName];
+            }
+        },
+
         randomString: function(len, charSet) {
             charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
             var randomString = '';
