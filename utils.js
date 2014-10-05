@@ -87,7 +87,7 @@ define(['lodash'], function(_) {
         }
     }
 
-    function copyParamIfDefined (key, fromObject, toObject) {
+    function copyParamIfDefined(key, fromObject, toObject) {
         addParamIfDefined(key, fromObject[key], toObject);
     }
 

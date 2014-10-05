@@ -80,9 +80,13 @@ define(['lodash'], function(_) {
         },
         GYROSCOPE_X_RANGE: [-5, 5],
         GYROSCOPE_Y_RANGE: [-7, 7],
-        NOTES: NOTES,
         SYNTH_NOTE_RANGE: [NOTES.A3, NOTES.A4],
+        NOTES: NOTES,
         PARAMS: ['color', 'drum', 'drum_kit', 'tempo', 'start_time', 'running'],
+        EFFECTS: {
+            DRUM: [ 'reverb', 'bitcrush' ],
+            SEQUENCER: [ 'silence', 'random' ]
+        },
         DRUM_KITS: [
             {
                 name: 'Lacuna Rock Kit',
