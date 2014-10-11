@@ -26,7 +26,18 @@ define(['./constants'], function (constants) {
     }
 
     function isOnGamePage(location) {
-        return location.pathname === constants.URLS.GAME;
+        location = location.substr('http://'.length);
+        var pathStart = location.indexOf('/');
+        var pathEnd = location.indexOf('?');
+        if (pathEnd < 0) {
+            pathEnd = location.length;
+        }
+        if (pathStart >= 0 && pathEnd >= 0) {
+            var length = pathEnd - pathStart;
+            var pathname = location.substr(pathStart, length);
+            return pathname === constants.URLS.GAME;
+        }
+        return false;
     }
 
     function getGameCodeFromUrl(url) {
