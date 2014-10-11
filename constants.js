@@ -13,7 +13,6 @@ if (typeof define !== 'function') {
 define(['lodash'], function(_) {
     "use strict";
     var PLAYER_COLORS = ['blue', 'red', 'green', 'yellow', 'purple', 'orange'];
-    var OPEN_SESSION_PLAYER_COLORS = _.without(PLAYER_COLORS, "orange");
     var NOTES = {
         D3: 146.83,
         E3: 164.81,
@@ -69,7 +68,7 @@ define(['lodash'], function(_) {
         REMOTE_API_HOST: 'http://drum-circle-api.herokuapp.com',
         PRODUCTION_WEB_HOST: 'drumcircle.io',
         PLAYER_COLORS: PLAYER_COLORS,
-        OPEN_SESSION_PLAYER_COLORS: OPEN_SESSION_PLAYER_COLORS,
+        OPEN_SESSION_PLAYER_COLORS: _.initial(PLAYER_COLORS),
         OPEN_SESSION_CODE: 100,
         USE_DRUM_EQ: true,
         EQ: {
