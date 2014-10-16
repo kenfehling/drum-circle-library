@@ -14,6 +14,8 @@ define(['lodash'], function(_) {
     "use strict";
     var PLAYER_COLORS = ['blue', 'red', 'green', 'yellow', 'purple', 'orange'];
     var NOTES = {
+        A2: 110,
+        C3: 130.81,
         D3: 146.83,
         E3: 164.81,
         G3: 196.00,
@@ -25,16 +27,25 @@ define(['lodash'], function(_) {
         A4: 440,
         C5: 523.25,
         D5: 587.33,
-        E5: 659.25
-        //G5: 783.99
-        //A5: 880
+        E5: 659.25,
+        G5: 783.99,
+        A5: 880
     };
     var DEFAULT_API_PORT = 8080;
     var DEFAULT_API_HOST = 'http://localhost:' + DEFAULT_API_PORT;
     return {
         APP_NAME: "Drum Circle",
         FANOUT_REALM: "63969fc2",
-        MIN_PLAYERS: 0, //2,
+        SYNTH_PAD_NOTE_RANGE: [NOTES.A3, NOTES.A4],
+        SYNTH_LEAD_NOTE_RANGES: {
+            'kick': [NOTES.D3, NOTES.D3],
+            'snare': [NOTES.D4, NOTES.D5],
+            'hightom': [NOTES.A3, NOTES.A4],
+            'lowtom': [NOTES.A3, NOTES.A4],
+            'hihat': [NOTES.C5, NOTES.E5],
+            'default': [NOTES.A3, NOTES.A4]
+        },
+        MIN_PLAYERS: 2,
         MAX_PLAYERS: PLAYER_COLORS.length,
         NUM_DRUMS_IN_KIT: 6,
         GRANULARITY: 1,  // Allowable error in ms, may affect performance
@@ -79,14 +90,6 @@ define(['lodash'], function(_) {
         },
         GYROSCOPE_X_RANGE: [-5, 5],
         GYROSCOPE_Y_RANGE: [-7, 7],
-        SYNTH_PAD_NOTE_RANGE: [NOTES.A3, NOTES.A4],
-        SYNTH_LEAD_NOTE_RANGES: {
-            'kick': [NOTES.D3, NOTES.D4],
-            'snare': [NOTES.A3, NOTES.A4],
-            'hightom': [NOTES.D3, NOTES.D4],
-            'lowtom': [NOTES.D3, NOTES.D4],
-            'default': [NOTES.A3, NOTES.A4]
-        },
         NOTES: NOTES,
         PARAMS: ['color', 'drum', 'drum_kit', 'tempo', 'start_time', 'running'],
         EFFECTS: {
