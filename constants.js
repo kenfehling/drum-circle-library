@@ -14,8 +14,6 @@ define(['lodash'], function(_) {
     "use strict";
     var PLAYER_COLORS = ['blue', 'red', 'green', 'yellow', 'purple', 'orange'];
     var NOTES = {
-        A2: 110,
-        C3: 130.81,
         D3: 146.83,
         E3: 164.81,
         G3: 196.00,
@@ -38,7 +36,7 @@ define(['lodash'], function(_) {
         FANOUT_REALM: "63969fc2",
         SYNTH_PAD_NOTE_RANGE: [NOTES.A3, NOTES.A4],
         SYNTH_LEAD_NOTE_RANGES: {
-            'kick': [NOTES.D3, NOTES.D3],
+            'kick': [NOTES.E3, NOTES.E4],
             'snare': [NOTES.D4, NOTES.D5],
             'hightom': [NOTES.A3, NOTES.A4],
             'lowtom': [NOTES.A3, NOTES.A4],
@@ -50,9 +48,9 @@ define(['lodash'], function(_) {
         NUM_DRUMS_IN_KIT: 6,
         GRANULARITY: 1,  // Allowable error in ms, may affect performance
         DRUM_VOLUME: 1.0,
-        SYNTH_VOLUME: 0.05,
+        SYNTH_VOLUME: 0.3,
         BEAT_DIVISIONS: [4, 6, 8],  // For different screen sizes
-        SYNTH_ENVELOPE: [[3, 5.5], 1.0, 1.0, 1.0],  // Params can be ranges
+        SYNTH_PAD_ENVELOPE: [[3, 5.5], 1.0, 1.0, 1.0],  // Params can be ranges
         TEMPO: {
             CHOICES: [15,30,60,120],
             DEFAULT: 60
