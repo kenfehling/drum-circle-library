@@ -50,7 +50,7 @@ define(['lodash'], function(_) {
         NUM_DRUMS_IN_KIT: 6,
         GRANULARITY: 1,  // Allowable error in ms, may affect performance
         DRUM_VOLUME: 1.0,
-        SYNTH_VOLUME: 0.3,
+        MAX_SYNTH_VOLUME: 0.5,
         BEAT_DIVISIONS: [4, 6, 8],  // For different screen sizes
         SYNTH_PAD_ENVELOPE: [7, 2, 1, 0],
         TEMPO: {
