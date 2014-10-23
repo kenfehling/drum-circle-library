@@ -98,7 +98,7 @@ define(['lodash'], function(_) {
             {
                 name: 'Lacuna Rock Kit',
                 path: 'Lacuna_Rock_Kit',
-                drums: ['kick', 'snare', 'hightom', 'lowtom', 'hihat', 'crash']
+                drums: ['kick', 'snare', 'hightom', 'lowtom', 'hihat', 'lowsnare']
             }
             /*
              {
