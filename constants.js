@@ -36,9 +36,9 @@ define(['lodash'], function(_) {
     return {
         APP_NAME: "Drum Circle",
         FANOUT_REALM: "63969fc2",
-        SYNTH_PAD_NOTE_RANGE: [NOTES.A3, NOTES.A4],
+        SYNTH_PAD_NOTE_RANGE: [NOTES.A2, NOTES.A3],
         SYNTH_LEAD_NOTES: {
-            'kick': [NOTES.A2, NOTES.D3, NOTES.E3],
+            'kick': [NOTES.D3, NOTES.A2, NOTES.A3],
             'snare': [NOTES.D4, NOTES.D5, NOTES.A4],
             'hightom': [NOTES.A4, NOTES.C5, NOTES.D5],
             'lowtom': [NOTES.A3, NOTES.A4, NOTES.A5],
@@ -52,7 +52,7 @@ define(['lodash'], function(_) {
         DRUM_VOLUME: 1.0,
         SYNTH_VOLUME: 0.3,
         BEAT_DIVISIONS: [4, 6, 8],  // For different screen sizes
-        SYNTH_PAD_ENVELOPE: [[1.5, 2], 0.4, 0.8, 0],  // Params can be ranges
+        SYNTH_PAD_ENVELOPE: [7, 2, 1, 0],
         TEMPO: {
             CHOICES: [15, 30, 60, 120],
             DEFAULT: 60
@@ -67,8 +67,7 @@ define(['lodash'], function(_) {
         MEASURES_IN_CYCLE: 1,
         TIME_SYNCH_REQUESTS: 20,
         PSEUDO_TOUCH_RESPONSE_VARIATION: 0.05,
-        ALLOW_SEND_EFFECT_TO_SELF_IN_GAME: false,
-        ALLOW_SEND_EFFECT_TO_SELF_IN_OPEN_SESSION: true,
+        USE_DRUM_EQ: false,
         SECONDS_PER_DRUM_SAMPLE: 4,
         CIRCLE_POSITION_SCREEN_DURATION: 5000,
         DEFAULT_WEB_PORT: 5000,
@@ -81,7 +80,6 @@ define(['lodash'], function(_) {
         PLAYER_COLORS: PLAYER_COLORS,
         OPEN_SESSION_PLAYER_COLORS: _.initial(PLAYER_COLORS),
         OPEN_SESSION_CODE: 100,
-        USE_DRUM_EQ: true,
         EQ: {
             SYNTH_FREQ_RANGE: [350, 2000],
             DRUM_FREQ_RANGE: [500, 1000],
