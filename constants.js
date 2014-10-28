@@ -99,6 +99,11 @@ define(['lodash'], function(_) {
                 name: 'Lacuna Rock Kit',
                 path: 'Lacuna_Rock_Kit',
                 drums: ['kick', 'snare', 'hightom', 'lowtom', 'hihat', 'lowsnare']
+            },
+            {
+                name: "Derek's Percussion",
+                path: 'derek_drums',
+                drums: ['wrench', 'flowerPot', 'metalDish', 'metalPipe', 'springDrum', 'gong' ]
             }
             /*
              {
