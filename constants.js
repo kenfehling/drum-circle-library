@@ -45,14 +45,16 @@ define(['lodash'], function(_) {
             'hihat': [NOTES.C5, NOTES.E5, NOTES.A5],
             'default': [NOTES.A3, NOTES.A4, NOTES.A5]
         },
+        DRUM_VOLUME: 1.0,
+        MAX_SYNTH_VOLUME: 0.5,
+        MIN_SYNTH_PAD_VOLUME: 0.05,
+        SYNTH_PAD_FADE_IN_AMOUNT: 0.33,
+        SYNTH_PAD_ENVELOPE: [7, 2, 1, 0],
         MIN_PLAYERS: 2,
         MAX_PLAYERS: PLAYER_COLORS.length,
         NUM_DRUMS_IN_KIT: 6,
         GRANULARITY: 1,  // Allowable error in ms, may affect performance
-        DRUM_VOLUME: 1.0,
-        MAX_SYNTH_VOLUME: 0.5,
         BEAT_DIVISIONS: [4, 6, 8],  // For different screen sizes
-        SYNTH_PAD_ENVELOPE: [7, 2, 1, 0],
         TEMPO: {
             CHOICES: [15, 30, 60, 120],
             DEFAULT: 60
