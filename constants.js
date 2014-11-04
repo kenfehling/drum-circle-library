@@ -47,8 +47,6 @@ define(['lodash'], function(_) {
         },
         DRUM_VOLUME: 1.0,
         MAX_SYNTH_VOLUME: 0.5,
-        MIN_SYNTH_PAD_VOLUME: 0.05,
-        SYNTH_PAD_FADE_IN_AMOUNT: 0.33,
         SYNTH_PAD_ENVELOPE: [7, 2, 1, 0],
         MIN_PLAYERS: 2,
         MAX_PLAYERS: PLAYER_COLORS.length,
